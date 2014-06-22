@@ -1,0 +1,28 @@
+#Tags for roman
+Tags
+  tag order=1 val =1 ,name =I
+  tag order=2 val = 5 name =V
+  tag order =3 val =10 name=X
+  tag order =4 val =50 name=L
+  tag order =5 val =100 name=C
+  tag order =6 val =500 name=D
+  tag order =7 val =1000 name=M
+  
+Rules
+    Repeat 1 group D L V
+    Repeat 3 groups I C X M 
+    
+    SpecialRepeat
+      3 +1 -- (XXXIX)
+  
+  Befores 1 token of lower order allowed
+      
+  Beforespecial
+    [I] before [V,X] allowed
+    [X] before [L,C] allowed
+    [C] before [D,M] allowed
+    
+
+ Eval
+  Default
+  Substract if lower order token is before current
