@@ -1,6 +1,11 @@
-Run Client.java to start
+How to run:
+run mvn package on the top directory
+cd target
+java -cp galaxyconverter-1.0-SNAPSHOT.jar com.thoughtworks.galaxyconverter.client.Client
 
-Built on Java8
+
+(Requires java7)
+
 
 Input fomat information:
 
@@ -11,5 +16,7 @@ Input:To give item value input like 'glob glob Silver is 34 Credits' enter 'glob
 Question:To get value of an itme like 'how many Credits is glob prok Silver' enter 'glob prok=Silver=?'
 Exit:exit
 
+
+Sample input in the file Inputs
 
 
